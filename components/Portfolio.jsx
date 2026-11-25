@@ -6,7 +6,8 @@ import { ArtworkViewer, VideoViewer } from "./Viewers";
 import { projects, mobileProjects, portraits, studies } from "../lib/projects";
 import { getHeroParallax } from "../lib/hero-parallax";
 
-const featured = ["the-gilded-chronicles", "the-last-mile", "the-last-ride"].map(id => projects.find(project => project.id === id));
+const featured = ["the-gilded-chronicles", "winter-is-coming", "the-last-ride"].map(id => projects.find(project => project.id === id));
+const heroTrailer = projects.find(project => project.id === "twin-earth");
 const disciplines = ["VIDEO EDITING", "AI FILMMAKING", "CINEMATIC STORYTELLING", "VISUAL ART"];
 
 export default function Portfolio() {
@@ -96,7 +97,7 @@ export default function Portfolio() {
             <a className="primary" href="#featured">Discover my work<span className="button-spark" aria-hidden="true">✳</span></a>
           </div>
         </div>
-        <div className="hero-bottom"><p>STORIES WITH INTENT.<br /><span>EVERY FRAME, A FEELING.</span></p><a className="scroll-cue" href="#featured"><span className="scroll-track" aria-hidden="true"><i /></span>Scroll to explore</a><button className="trailer-cue" onClick={() => play(projects[0], projects[0].videos[0])} type="button" aria-haspopup="dialog"><span className="trailer-image"><img src="/assets/twin-earth-small.webp" alt="" width="768" height="432" /><span><PlayIcon /></span></span><span><small>STEP INTO MY WORLD</small><strong>Watch Twin Earth</strong></span></button></div>
+        <div className="hero-bottom"><p>STORIES WITH INTENT.<br /><span>EVERY FRAME, A FEELING.</span></p><a className="scroll-cue" href="#featured"><span className="scroll-track" aria-hidden="true"><i /></span>Scroll to explore</a><button className="trailer-cue" onClick={() => play(heroTrailer, heroTrailer.videos[0])} type="button" aria-haspopup="dialog"><span className="trailer-image"><img src="/assets/twin-earth-small.webp" alt="" width="768" height="432" /><span><PlayIcon /></span></span><span><small>STEP INTO MY WORLD</small><strong>Watch Twin Earth</strong></span></button></div>
         </div>
       </section>
       <div className="discipline-strip" aria-label="Creative disciplines"><div className="discipline-track">{[0, 1].map(copy => <div className="discipline-set" key={copy} aria-hidden={copy === 1 ? true : undefined}>{disciplines.map(label => <span key={label}>{label}<span aria-hidden="true">✳</span></span>)}</div>)}</div></div>
