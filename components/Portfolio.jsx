@@ -6,7 +6,7 @@ import { ArtworkViewer, VideoViewer } from "./Viewers";
 import { projects, mobileProjects, portraits, studies } from "../lib/projects";
 import { getHeroParallax } from "../lib/hero-parallax";
 
-const featured = ["the-gilded-chronicles", "winter-is-coming", "the-last-ride"].map(id => projects.find(project => project.id === id));
+const featured = ["winter-is-coming", "the-last-mile", "the-last-ride"].map(id => projects.find(project => project.id === id));
 const heroTrailer = projects.find(project => project.id === "twin-earth");
 const disciplines = ["VIDEO EDITING", "AI FILMMAKING", "CINEMATIC STORYTELLING", "VISUAL ART"];
 
